@@ -36,3 +36,13 @@ console.log(typeof b)
 let c = true;
 console.log(typeof c)
 
+const name = prompt("Your name?");
+console.log(name)
+const surname = prompt("Your surname?");
+console.log(surname)
+const age = +prompt("Your Age?");
+console.log(age)
+const result = `${name} ${surname} ${age}`;
+console.log(result);
+
+
