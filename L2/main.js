@@ -1,5 +1,15 @@
 // Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль
-let arr = [true, 24, 'hello', [76,14,63], 'boolean', "the best", typeof 11, false, `object`, [666]];
+let arr = [];
+arr[0] = true;
+arr[1] = 24;
+arr[2] = 'hello';
+arr[3] = [76,14,63];
+arr[4] = 'boolean';
+arr[5] = "the best";
+arr[6] = typeof 11;
+arr[7] = false;
+arr[8] = `object`;
+arr[9] = [666];
 console.log(arr);
 
 // - Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.
@@ -35,29 +45,17 @@ let book3 = {
 console.log(book3);
 
 // - Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача
-let user1 = {name:'jack', surname: 'jo', password: '123qwe'};
-let user2 = {name:'bob', surname: 'b', password: '123asd'};
-let user3 = {name:'lekro', surname: 'l', password: '123zxc'};
-let user4 = {name:'van', surname: 'v', password: '321qwe'};
-let user5 = {name:'taras', surname: 't', password: '321qwe'};
-let user6 = {name:'wild', surname: 'w', password: '321qwe'};
-let user7 = {name:'mark', surname: 'm', password: '54gv75'};
-let user8 = {name:'frank', surname: 'f', password: 'w745we'};
-let user9 = {name:'george', surname: 'g', password: 'we4g64'};
-let user10 = {name:'hank', surname: 'h', password: '76i4n'};
-
-
 let bigArr = [
-    user1,
-    user2,
-    user3,
-    user4,
-    user5,
-    user6,
-    user7,
-    user8,
-    user9,
-    user10
+    {name:'jack', surname: 'jo', password: '123qwe'},
+    {name:'bob', surname: 'b', password: '123asd'},
+    {name:'lekro', surname: 'l', password: '123zxc'},
+    {name:'van', surname: 'v', password: '321qwe'},
+    {name:'taras', surname: 't', password: '321qwe'},
+    {name:'wild', surname: 'w', password: '321qwe'},
+    {name:'mark', surname: 'm', password: '54gv75'},
+    {name:'frank', surname: 'f', password: 'w745we'},
+    {name:'george', surname: 'g', password: 'we4g64'},
+    {name:'hank', surname: 'h', password: '76i4n'}
 ]
 console.log(bigArr[0].password);
 console.log(bigArr[1].password);
