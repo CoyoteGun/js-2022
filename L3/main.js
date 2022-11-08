@@ -31,7 +31,7 @@ if (x !== 0){
 // - Дано змінну time яка рівна числу від 0 до 59. Потрібно написати код, який перевірить, до якої четверті години попадає число
 // (в першу, другу, третю или четверту частину години).
 
-let time = prompt('choose a number from 0 to 59');
+let time = 24;
 if (time <= 15){
     console.log('1 part');
 }else if (time > 15 && time <= 30){
@@ -46,7 +46,7 @@ if (time <= 15){
 
 // - У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).
 
-let day = +prompt('put the number from 1 to 31');
+let day = 24;
 if (day >= 1 && day <= 11){
     console.log('1 part');
 }else if (day > 11 && day < 21){
@@ -59,7 +59,7 @@ if (day >= 1 && day <= 11){
 
 // - Скласти розклад на тиждень за домопоги switch. Користувач вводить порядковий номер дня тижня і на екрані відображається інфа що заплановано на цей день (можна замість плану на день, назву дня англійською).
 
-let schedule = +prompt('Number of day');
+let schedule = +prompt('From 1 to 7');
 
 switch (schedule) {
     case 1:
@@ -92,19 +92,16 @@ switch (schedule) {
 //         Потрібно знайти та вивести максимальне число з тих двох .
 //         Також потрібно врахувати коли введені рівні числа.
 
-let n1 = +prompt('put a number');
-let n2 = +prompt('put second number');
-let numSum = confirm('Is the n1 < n2');
-switch (numSum){
-    case n1 < n2:
-        console.log(n2);
-        break;
-    case n1 > n2:
-        console.log(n1);
-        break;
-    case n1 === n2:
-        console.log('n1 = n2');
-        break;
+let n1 = 10;
+let n2 = 24;
+if (n1 > n2) {
+    console.log(a);
+}else if (b > a){
+    console.log(b);
+}else if (a === b){
+    console.log('equal');
+}else {
+    console.log('error');
 }
 
 
