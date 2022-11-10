@@ -1,0 +1,27 @@
+.product-card{
+    width: 250px;
+    background: #d4d2d2;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding: 10px;
+}
+.product-title{
+    width: 100px;
+    height: 50px;
+    background: #000;
+    color: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.product-image{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+}
