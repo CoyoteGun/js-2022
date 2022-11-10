@@ -42,13 +42,12 @@ while (i < head.length) {
 
 let listOfItems = ['html',
     'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
-
+document.write(`<ul>`);
 for (let j = 0; j < listOfItems.length; j++) {
     const listOfItem = listOfItems[j];
-    document.write(`<ul><li>${listOfItem}</li></ul>`);
-    
+    document.write(`<li>${listOfItem}</li>`);
 }
-
+document.write(`</ul>`);
 // Використовуючи данні з масиву, за допомоги document.write та циклу
 // побудувати структуру по шаблону  Зробити адекватну стилізацію
 // Великими літерами прописанні властивості об'єкту які потрібно впровадити в шаблон
