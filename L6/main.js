@@ -81,19 +81,50 @@ console.log(filter);
 
 
 // описати колоду карт
-// - знайти піковий туз
-// - всі шістки
-// - всі червоні карти
-// - всі буби
-// - всі трефи від 9 та більше
-
-
 // {
 //     cardSuit: '', // 'spade', 'diamond','heart', 'clubs'
 //         value: '', // '6'-'10', 'ace','jack','queen','king','joker'
 //     color:'', // 'red','black'
 // }
 
+const deckCard = [
+    {cardSuit:'spade' ,color:'black'},
+    {cardSuit:'diamond' ,color:'red'},
+    {cardSuit:'heart' ,color:'red'},
+    {cardSuit:'clubs' ,color:'black'}
+]
+const valueOfCard = [6,7,8,9,10,'ace','jack','queen','king'];
+const deck =[];
+
+for (const deckItem of deckCard) {
+    for (const valueCard of valueOfCard) {
+        const card = {
+            cardSuit: deckItem.cardSuit,
+            value: valueCard,
+            color: deckItem.color
+        }
+        deck.push(card);
+    }
+}
+deck.push({cardSuit: 'joker', value: 'strong', color: 'red'});
+deck.push({cardSuit: 'joker', value: 'strong', color: 'black'});
+
+// - знайти піковий туз
+let spadeAce = deck.filter(value => value.cardSuit === 'spade' && value.value === 'ace');
+console.log(spadeAce);
+// - всі шістки
+let f6 = deck.filter(value => value.value === 6);
+console.log(f6);
+// - всі червоні карти
+let redCard = deck.filter(value => value.color === 'red');
+console.log(redCard);
+// - всі буби
+let diamondCard = deck.filter(value => value.cardSuit === 'diamond');
+console.log(diamondCard);
+// - всі трефи від 9 та більше
+let clubsCard = deck.filter(value => (value.cardSuit === 'clubs' && value.value >= 9) ||
+    (value.cardSuit === 'clubs' && typeof value.value === 'string'));
+console.log(clubsCard);
 
 // Додатково по reduce
 // Взяти описану колоду карт, та за допомоги редюсу попакувати всі карти по "мастях" в об'єкт
@@ -103,3 +134,25 @@ console.log(filter);
 //     hearts:[],
 //     clubs:[]
 // }
+
+let reduce = deck.reduce((accumulator, card) => {
+    if (card.cardSuit === 'spade'){
+        accumulator.spades.push(card);
+    }else if (card.cardSuit === 'diamond') {
+        accumulator.diamonds.push(card);
+    }else if (card.cardSuit === 'heart') {
+        accumulator.hearts.push(card);
+    }else if (card.cardSuit === 'clubs') {
+        accumulator.clubs.push(card);
+    }
+    return accumulator;
+},{
+    spades: [],
+    diamonds:[],
+    hearts:[],
+    clubs:[]
+});
+
+console.log(reduce);
+
+
